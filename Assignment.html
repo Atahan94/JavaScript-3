@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment</title>
+    </head>
+    <body>
+
+        <script>
+         let el = document.createElement("ul");
+         document.body.appendChild(el);
+
+         let txt = ["Ul1 txt","Ul2 txt"];
+         txt.forEach((element) =>
+         {
+           var li = document.createElement("li");
+           li.innerText = element;
+           li.style.marginTop ="2rem";
+           //li.classList = "at";
+           li.addEventListener("mouseup", () => 
+           { var cl = li.style.color;
+             if(cl == "red")
+             {
+                li.style.color = "black"
+             }
+             else
+             {
+                li.style.color = "red";
+             }
+           });
+           
+           
+           el.appendChild(li);
+         });
+        
+        </script>
+    </body>
+</html>
